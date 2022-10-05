@@ -189,6 +189,28 @@ nav img{
 
 }
  
+@media screen and (max-width:768px) {
+
+    #hero{
+        margin-top: 171px; 
+    }
+
+    #hero-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        z-index: 2;
+    }
+
+    #hero-content h1{
+        font-weight: 600;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+}
 
 
 /*SLOGAN CENTRER PAGE*/
@@ -224,8 +246,17 @@ nav img{
 
 }
 
+@media screen and (max-width:768px) {
 
-/*PRODUIT PAGE ACCUEIL*/
+    #slogan h2{
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+}
+
+
+/*PRODUITS PAGE ACCUEIL*/
 #product{
     display: flex;
     justify-content: center;
@@ -242,7 +273,7 @@ nav img{
     width: 400px;
     height: 500px;
     background-color: white;
-    margin: 40px 20px;
+    margin: 40px 20px 0px 20px;
 }
 
 #product-image-1, #product-image-2, #product-image-3,#product-image-4, #product-image-5, #product-image-6,#product-image-7, #product-image-8, #product-image-9{
@@ -253,6 +284,7 @@ nav img{
     height: 400px;
 
 }
+
 #product-image-1{
     background-image: url(./images/product-shoes-1.webp);
 }
@@ -309,7 +341,7 @@ nav img{
     padding-top: 10px;
 }
 
-/*SLOGAN CENTRER PAGE RESPONSIVE*/
+/*PRODUITS PAGE ACCUEIL RESPONSIVE*/
 
 @media screen and (max-width:576px) {
 
@@ -321,3 +353,95 @@ nav img{
         margin: 20px 0px;
     }
 }
+
+@media screen and (max-width:768px) {
+
+    .product-box{
+        width: 300px;
+        height: max-content;
+        background-color: white;
+        margin: 30px 10px;
+        margin: 30px 10px 0px 10px;
+    }
+    
+    #product-image-1, #product-image-2, #product-image-3,#product-image-4, #product-image-5, #product-image-6,#product-image-7, #product-image-8, #product-image-9{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 300px;
+        height: 300px;
+    
+    }
+
+    .product-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80px;
+    }
+}
+
+
+
+/*PAGE PRODUIT TYPE*/
+
+#product-choose{
+    margin-top: 161px;
+    display: flex;
+}
+
+#product-choose-left{
+    display: flex;
+    justify-content: center;
+    max-width: 60%;
+}
+
+#product-choose-right{
+    display: flex;
+    max-width: 40%;
+}
+
+#product-grid-image{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+
+}
+
+#product-presentation-image1-1{
+    background-image: url(./images/product-presentation-image1-1.webp);
+}
+
+#product-presentation-image1-2{
+    background-image: url(./images/product-presentation-image1-2.webp);
+}
+
+#product-presentation-image1-3{
+    background-image: url(./images/product-presentation-image1-3.webp);
+}
+
+#product-presentation-image1-4{
+    background-image: url(./images/product-presentation-image1-4.webp);
+}
+
+#product-presentation-image1-5{
+    background-image: url(./images/product-presentation-image1-5.webp);
+}
+
+#product-presentation-image1-6{
+    background-image: url(./images/product-presentation-image1-6.webp);
+}
+
+
+#product-presentation-image1-1, #product-presentation-image1-2, #product-presentation-image1-3,#product-presentation-image1-4, #product-presentation-image1-5, #product-presentation-image1-6{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    margin: 20px 10px 0px 10px;
+}
+
+
+
+
