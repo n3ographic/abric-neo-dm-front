@@ -76,9 +76,40 @@ nav img{
     font-size: 14px;
 }
 
+/*MENU RESPONSIVE*/
+
+@media screen and (max-width:768px) {
+
+   nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   } 
+
+   nav div{
+    margin-top: 10px;
+   }
+
+   nav div ul{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+   }
+
+   nav div ul li{
+    padding: 0px 20px;
+   }
+
+   #bandeauPromo{
+    font-size: 12px;
+    padding: 0px 20px;
+   }
+    
+}
+
+
 
 /*HERO*/
-
 
 #hero{
     display: flex;
@@ -96,22 +127,19 @@ nav img{
     margin-top: 161px;
 }
 
-
-
 #hero-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
-
     z-index: 2;
 }
 
 #hero-opacity{
     content: "";
     background-color: #000000;
-    opacity: 0.2;
+    opacity: 0.3;
     position: absolute;
     left: 0;
     width: 100%;
@@ -136,6 +164,32 @@ nav img{
     border: none;
 }
 
+/*HERO RESPONSIVE*/
+
+@media screen and (max-width:576px) {
+
+    #hero{
+        margin-top: 212px; 
+    }
+
+    #hero-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        z-index: 2;
+    }
+
+    #hero-content h1{
+        font-weight: 600;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+}
+ 
+
 
 /*SLOGAN CENTRER PAGE*/
 
@@ -159,8 +213,30 @@ nav img{
     font-size: 18px;
 }
 
+/*SLOGAN CENTRER PAGE RESPONSIVE*/
+
+@media screen and (max-width:576px) {
+
+    #slogan h2{
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+}
+
 
 /*PRODUIT PAGE ACCUEIL*/
+#product{
+    display: flex;
+    justify-content: center;
+}
+
+.product-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
 
 .product-box{
     width: 400px;
@@ -214,25 +290,11 @@ nav img{
     background-image: url(./images/product-shoes-9.webp);
 }
 
-#product{
-    display: flex;
-    justify-content: center;
-}
-
-.product-row{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-}
-
 .product-info{
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 100px;
-
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
 }
 
 .product-info div{
@@ -245,7 +307,17 @@ height: 100px;
     color: grey;
     font-weight: 400;
     padding-top: 10px;
-
 }
 
+/*SLOGAN CENTRER PAGE RESPONSIVE*/
 
+@media screen and (max-width:576px) {
+
+    .product-info{
+        padding: 0px 30px;
+    }
+
+    .product-box{
+        margin: 20px 0px;
+    }
+}
