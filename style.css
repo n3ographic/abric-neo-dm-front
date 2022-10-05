@@ -56,3 +56,28 @@ nav div ul li {
 nav img{
     width: 100px;
 }
+
+#bandeauPromo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: whitesmoke;
+    height: 50px;
+    font-size: 14px;
+}
+
+
+
+#hero div{
+
+}
+
+#hero{
+    position: relative;
+}
+#hero::before {
+
+    /*test*/
+
+  }
