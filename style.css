@@ -83,6 +83,7 @@ nav img{
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
+    margin-bottom: 40px;
 }
 
 
@@ -122,8 +123,7 @@ nav img{
     color: #000000;
     font-weight: 700;
     border-radius: 40px;
-    border: solid 2px black;
-
+    border: none;
 }
 
 
@@ -153,7 +153,7 @@ nav img{
     width: 400px;
     height: 500px;
     background-color: white;
-    margin: 20px;
+    margin: 40px 20px;
 }
 
 #product-image-1{
@@ -165,8 +165,34 @@ nav img{
     height: 400px;
 }
 
+#product-image-2{
+    background-image: url(./images/product-shoes-2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 400px;
+}
+
+#product-image-3{
+    background-image: url(./images/product-shoes-3.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 400px;
+}
+
+#product{
+    display: flex;
+    justify-content: center;
+}
+
 .product-row{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 .product-info{
@@ -182,6 +208,13 @@ height: 100px;
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.description-color{
+    color: grey;
+    font-weight: 400;
+    padding-top: 10px;
+
 }
 
 
