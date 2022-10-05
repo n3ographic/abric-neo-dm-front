@@ -1,0 +1,58 @@
+html, body{
+    margin: 0;
+    font-size: 16px;
+    background-color: #fff;
+    font-weight: 500;
+    font-family: 'Raleway';
+}
+
+
+
+/*GENERAL*/
+
+i {
+    color: #000000 ;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: #0065FC;
+    transition: all 0.4s;
+}
+
+
+
+/*MENU*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px;
+}
+nav div ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+   /* margin: 30px;*/
+}
+
+nav div ul li {
+    list-style: none;
+    padding: 0px 30px;
+
+}
+
+nav img{
+    width: 100px;
+}
