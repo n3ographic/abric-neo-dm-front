@@ -32,6 +32,15 @@ a:hover{
 
 
 /*MENU*/
+header{
+    position:fixed;
+    top:0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 999;
+   
+}
 
 nav{
     display: flex;
@@ -84,6 +93,7 @@ nav img{
     background-size: cover;
     z-index: 0;
     margin-bottom: 40px;
+    margin-top: 161px;
 }
 
 
