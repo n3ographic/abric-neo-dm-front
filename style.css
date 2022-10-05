@@ -25,7 +25,7 @@ a{
 }
 
 a:hover{
-    color: #0065FC;
+    color: black;
     transition: all 0.4s;
 }
 
@@ -159,6 +159,9 @@ nav img{
     font-size: 18px;
 }
 
+
+/*PRODUIT PAGE ACCUEIL*/
+
 .product-box{
     width: 400px;
     height: 500px;
@@ -166,31 +169,49 @@ nav img{
     margin: 40px 20px;
 }
 
-#product-image-1{
-    background-image: url(./images/product-shoes-1.webp);
+#product-image-1, #product-image-2, #product-image-3,#product-image-4, #product-image-5, #product-image-6,#product-image-7, #product-image-8, #product-image-9{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 400px;
     height: 400px;
+
+}
+#product-image-1{
+    background-image: url(./images/product-shoes-1.webp);
 }
 
 #product-image-2{
     background-image: url(./images/product-shoes-2.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 400px;
-    height: 400px;
 }
 
 #product-image-3{
     background-image: url(./images/product-shoes-3.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 400px;
-    height: 400px;
+}
+
+#product-image-4{
+    background-image: url(./images/product-shoes-4.webp);
+}
+
+#product-image-5{
+    background-image: url(./images/product-shoes-5.webp);
+}
+
+#product-image-6{
+    background-image: url(./images/product-shoes-6.webp);
+}
+
+#product-image-7{
+    background-image: url(./images/product-shoes-7.webp);
+
+}
+
+#product-image-8{
+    background-image: url(./images/product-shoes-8.webp);
+}
+
+#product-image-9{
+    background-image: url(./images/product-shoes-9.webp);
 }
 
 #product{
