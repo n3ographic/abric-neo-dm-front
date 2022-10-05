@@ -149,3 +149,39 @@ nav img{
     font-size: 18px;
 }
 
+.product-box{
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    margin: 20px;
+}
+
+#product-image-1{
+    background-image: url(./images/product-shoes-1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 400px;
+}
+
+.product-row{
+    display: flex;
+}
+
+.product-info{
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 100px;
+
+
+}
+
+.product-info div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
