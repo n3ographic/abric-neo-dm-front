@@ -266,6 +266,7 @@ nav img{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1400px;
 
 }
 
@@ -380,7 +381,6 @@ nav img{
         height: 80px;
     }
 }
-
 
 
 /*PAGE PRODUIT TYPE*/
