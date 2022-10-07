@@ -393,12 +393,12 @@ nav img{
 #product-choose-left{
     display: flex;
     justify-content: center;
-    max-width: 60%;
+    max-width: 50%;
 }
 
 #product-choose-right{
     display: flex;
-    max-width: 40%;
+    max-width: 50%;
 }
 
 #product-grid-image{
@@ -408,40 +408,39 @@ flex-wrap: wrap;
 
 }
 
-#product-presentation-image1-1{
-    background-image: url(./images/product-presentation-image1-1.webp);
-}
-
-#product-presentation-image1-2{
-    background-image: url(./images/product-presentation-image1-2.webp);
-}
-
-#product-presentation-image1-3{
-    background-image: url(./images/product-presentation-image1-3.webp);
-}
-
-#product-presentation-image1-4{
-    background-image: url(./images/product-presentation-image1-4.webp);
-}
-
-#product-presentation-image1-5{
-    background-image: url(./images/product-presentation-image1-5.webp);
-}
-
-#product-presentation-image1-6{
-    background-image: url(./images/product-presentation-image1-6.webp);
-}
-
-
-#product-presentation-image1-1, #product-presentation-image1-2, #product-presentation-image1-3,#product-presentation-image1-4, #product-presentation-image1-5, #product-presentation-image1-6{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.product-image{
     width: 300px;
     height: 300px;
     margin: 20px 10px 0px 10px;
 }
 
+
+#product-choose-title{
+    margin-top: 20px;
+    font-size: 1.5em;
+
+}
+
+#product-choose-title p{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#product-choose-price{
+    margin: 30px 0px;
+}
+
+
+
+#product-purchase{
+    margin: 30px 0px;
+    padding: 20px 50px;
+    background-color: red;
+    color: #000000;
+    font-weight: 700;
+    border-radius: 40px;
+    border: none;
+}
 
 
 
