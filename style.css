@@ -617,6 +617,22 @@ margin-bottom: 10px;
  }
 
 
+  /*PAGE PAYEMENT*/
+
+  #payement{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #payement i{
+    margin-bottom: 30px;
+    color: green;
+    font-size: 5rem;
+  }
+
+
 
 
 
