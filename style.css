@@ -393,7 +393,12 @@ nav img{
 #product-choose-left{
     display: flex;
     justify-content: center;
-    max-width: 50%;
+    width: 50%;
+    background-image: url(./images/product-shoes-1.webp);
+    background-color: #F6F6F6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 #product-choose-right{
@@ -401,18 +406,11 @@ nav img{
     max-width: 50%;
 }
 
-#product-grid-image{
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-
-}
-
-.product-image{
+/*.product-image{
     width: 300px;
     height: 300px;
     margin: 20px 10px 0px 10px;
-}
+}*/
 
 
 #product-choose-title{
@@ -431,16 +429,70 @@ flex-wrap: wrap;
 }
 
 
-
-#product-purchase{
-    margin: 30px 0px;
-    padding: 20px 50px;
-    background-color: red;
-    color: #000000;
-    font-weight: 700;
-    border-radius: 40px;
-    border: none;
+#product-choose-price h2{
+   font-weight: 800;
 }
 
 
 
+#product-choose-description form{
+    display: flex;
+    flex-direction: column;
+    height: fit-content ;
+    justify-content: space-around;
+    
+    }
+
+#product-choose-size{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+
+}
+
+#product-choose-colors{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#product-choose-colors div{
+display: flex;
+padding-right:15px
+
+
+}
+
+#product-choose-size div{
+    display: flex;
+    padding-right:15px
+}
+
+
+#product-purchase{
+   
+    padding: 20px 50px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    border-radius: 40px;
+    border: none;
+    width: fit-content;
+    margin-top: 30px;
+
+}
+
+
+#product-description{
+    margin-top: 30px;
+    width: 50%;
+}
+
+#product-caracteristic{
+    margin-top: 30px;
+    width: 50%;
+}
+
+#product-description h3, #product-caracteristic h3 {
+margin-bottom: 10px;
+}
