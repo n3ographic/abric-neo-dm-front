@@ -53,7 +53,7 @@ function affichageProduits(response){
     //afficher tous les produits sur la page web
     structureProduits += `
             <div class="product-box">
-                <a href="http://127.0.0.1:5500/produit.html?${id[i]}">
+                <a href="http://127.0.0.1:5500/produit.html?id=${id[i]}">
                     <div id="product-image-1"></div>
                     <div class="product-info">
                         <div>
