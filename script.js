@@ -19,56 +19,13 @@ if(search_params.has('description' )){
 
 
 
-//========Déclaration du tableau de données=========
-
-const response = [
-    {
-        nomProduit:"Produit1",
-        //description:"",
-        prix:"150"
-    },
-
-    {
-        nomProduit:"Produit2",
-        //description:"",
-        prix:"1500"
-    },
-
-    {
-        nomProduit:"Produit3",
-        //description:"",
-        prix:"150"
-    },
-
-    {
-        nomProduit:"Produit4",
-        //description:"",
-        prix:"150"
-    },
-
-    {
-        nomProduit:"Produit5",
-        //description:"",
-        prix:"150"
-    },
-
-    {
-        nomProduit:"Produit6",
-        //description:"",
-        prix:"150"
-    },
-
-    {
-        nomProduit:"Produit7",
-        //description:"",
-        prix:"150"
-    },
-]
 
 
 //------------Mettre les données sur la page d'accueil------------
 
 //déclaration de variable
+//let url = [];
+let id = [];
 let nomProduit = [];
 let description = [];
 let  prix = [];
@@ -86,22 +43,24 @@ function affichageProduits(response){
 
     //mettre les données dans  les variables
     response.forEach((element, i) =>{
+        id[i] = element.id;
         nomProduit[i] = element.nomProduit;
         description[i] = element.description;
         prix[i] = element.prix;
+        //url[i] = element.url;
     });
 
     //afficher tous les produits sur la page web
     structureProduits += `
             <div class="product-box">
-                <a href="http://127.0.0.1:5500/produit.html?name=Nike-Air-Max-SKY&price=150€&description=Chaussure-de-course">
+                <a href="http://127.0.0.1:5500/produit.html?${id[i]}">
                     <div id="product-image-1"></div>
                     <div class="product-info">
                         <div>
-                            <h4><span>${nomProduit[i]}</span>Nike Air Max SKY</h4>
-                            <p><span>${prix[i]}</span>150€</p>
+                            <h4><span>${nomProduit[i]}</span></h4>
+                            <p><span>${prix[i]}</span></p>
                         </div>
-                        <span class="description-color"><p><span>${description[i]}</span>150€</p>Chaussure de course</p></span>
+                        <span class="description-color"><p><span>${description[i]}</span></p>Chaussure de course</p></span>
                     </div>
                 </a>
             </div>
