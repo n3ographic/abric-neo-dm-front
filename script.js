@@ -29,6 +29,7 @@ let id = [];
 let nomProduit = [];
 let description = [];
 let  prix = [];
+let type_chaussure = [];
 let structureProduits = "";
 let i = [];
 
@@ -47,6 +48,7 @@ function affichageProduits(response){
         nomProduit[i] = element.nomProduit;
         description[i] = element.description;
         prix[i] = element.prix;
+        type_chaussure[i] = element.type_chaussure
         //url[i] = element.url;
     });
 
@@ -60,7 +62,7 @@ function affichageProduits(response){
                             <h4><span>${nomProduit[i]}</span></h4>
                             <p><span>${prix[i]}</span></p>
                         </div>
-                        <span class="description-color"><p><span>${description[i]}</span></p>Chaussure de course</p></span>
+                        <span class="description-color"><p><span>${type_chaussure[i]}</span></p></span>
                     </div>
                 </a>
             </div>

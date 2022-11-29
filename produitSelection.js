@@ -23,7 +23,7 @@ const structurePageProduit = `
 
                 <div id="product-choose-title">
                     <h3><span>${idProduitSelection.nomProduit}</span></h3>
-                    <p>chaussure unisexe</p>
+                    <p><span>${idProduitSelection.type_chaussure}</span></p>
                 </div>
     
                 <div id="product-choose-price">
