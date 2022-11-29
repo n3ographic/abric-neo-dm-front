@@ -638,28 +638,68 @@ margin-bottom: 10px;
   /*PAGE PANIER*/
 
   #panier{
-    margin-top: 180px;
+    margin: 180px auto;
+    width: 90%;
   }
 
   .panier-produit{
     display: flex;
-    height: 50px;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 50px 0px 0px;
+    border: solid 1px black ;
   }
 
-#image {
+#panier-image {
     background-image: url(./images/product-shoes-1.webp);
-    height: 100px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     background-position: center;
+    background-size: cover;
   }
 
-
-
+#montant-panier{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100px ;
+}
 
 #product-description p span{
     font-weight: 500;
 }
+
+/*PAGE PANIER RESPONSIVE*/
+
+@media screen and (max-width:768px) {
+
+    .panier-produit{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0px 0px 20px 0px;
+        border: solid 1px black ;
+    }
+    
+    .panier-produit div {
+        width: 75%;
+        margin: auto;
+        padding: 15px 0px;
+    }
+
+    #panier-image {
+        background-image: url(./images/product-shoes-1.webp);
+        height: 300px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+
+}
+
 
 label {
     font-weight: 500;
