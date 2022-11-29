@@ -16,6 +16,7 @@ if(enregistrementProduitLocalStorage === null){
     positionElementPanier.innerHTML = panierVide;
 
 }else{
+    console.log(enregistrementProduitLocalStorage)
     let structurePagePanierProduitChoisis = [];
 
     for(j = 0; j < enregistrementProduitLocalStorage.length; j++){
@@ -33,12 +34,12 @@ if(enregistrementProduitLocalStorage === null){
 
                 <div>
                     <h4>Taille:</h4>
-                    <p>test</p>
+                    <p>${enregistrementProduitLocalStorage[j].idSize}</p>
                 </div>
 
                 <div>
                     <h4>Couleur:</h4>
-                    <p>test</p>
+                    <p>${enregistrementProduitLocalStorage[j].idColor}</p>
                 </div>
 
                 <div>

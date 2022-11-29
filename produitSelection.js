@@ -75,12 +75,12 @@ const structurePageProduit = `
 `;
 
 // option des couleurs
-let optionColor = idProduitSelection.color;
+const optionColor = idProduitSelection.color;
 let optionStructureColor =[];
 
 for(let a = 0; a < optionColor.length; a++){
     optionStructureColor += `
-    <option value="${a}">${optionColor[a]}</option>
+    <option value="${optionColor[a]}">${optionColor[a]}</option>
 
     `;
 }
@@ -88,11 +88,12 @@ for(let a = 0; a < optionColor.length; a++){
 // option des tailles 
 let optionTaille = idProduitSelection.taille;
 let optionStructureTaille=[];
+console.log(optionTaille)
 
 
 for(let e = 0; e < optionTaille.length; e++){
     optionStructureTaille += `
-    <option value="${e}">${optionTaille[e]}</option>
+    <option value="${optionTaille[e]}">${optionTaille[e]}</option>
 
     `;
 }
@@ -114,6 +115,7 @@ positionOptionSelectTaille.innerHTML = optionStructureTaille;
 
 //Sélection de l'id couleur du formulaire
 const idColor = document.querySelector("#option_color");
+console.log(idColor)
 
 //Sélection de l'id size du formulaire
 const idSize = document.querySelector("#option_size");
@@ -133,6 +135,7 @@ btnBoutonEnvoyerPanier.addEventListener("click", (event)=>{
 
     //Récupérer les valeurs du formulaire
     let optionProduit = {
+        url_image:idProduitSelection.url_image,
         nomProduit: idProduitSelection.nomProduit,
         idProduitSelection: idProduitSelection.id,
         idColor: choixColorForm,
