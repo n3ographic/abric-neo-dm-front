@@ -32,6 +32,7 @@ let  prix = [];
 let type_chaussure = [];
 let structureProduits = "";
 let i = [];
+let url_image = [];
 
 // fonction qui va afficher les produits dans la page web auto
 function affichageProduits(response){
@@ -48,7 +49,9 @@ function affichageProduits(response){
         nomProduit[i] = element.nomProduit;
         description[i] = element.description;
         prix[i] = element.prix;
-        type_chaussure[i] = element.type_chaussure
+        type_chaussure[i] = element.type_chaussure;
+        url_image[i] = element.url_image;
+
         //url[i] = element.url;
     });
 
@@ -56,7 +59,7 @@ function affichageProduits(response){
     structureProduits += `
             <div class="product-box">
                 <a href="http://127.0.0.1:5500/produit.html?id=${id[i]}">
-                    <div id="product-image-1"></div>
+                    <div id="${ url_image[i]}"></div>
                     <div class="product-info">
                         <div>
                             <h4><span>${nomProduit[i]}</span></h4>

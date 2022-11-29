@@ -287,40 +287,40 @@ nav img{
 }
 
 #product-image-1{
-    background-image: url(./images/product-shoes-1.webp);
+    background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/caf24333-490b-4fbd-8c99-dba4665dcd0c/chaussure-vapormax-2021-flyknit-pour-hF2qxf.png);
 }
 
 #product-image-2{
-    background-image: url(./images/product-shoes-2.webp);
+    background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/76201dcc-657c-4b3d-8a0f-860bcd3884ff/chaussures-air-max-terrascape-90-pour-MZbvJJ.png);
 }
 
 #product-image-3{
-    background-image: url(./images/product-shoes-3.webp);
+    background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d12c7979-0348-4485-9a18-1c3e164a8b93/chaussure-air-max-sc-pour-fdzWNV.png);
 }
 
 #product-image-4{
-    background-image: url(./images/product-shoes-4.webp);
+    background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/kybzbkolrlshxvlcw9p7/chaussure-air-max-270-pour-QwjlfC.png);
 }
 
 #product-image-5{
-    background-image: url(./images/product-shoes-5.webp);
+    background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/djwtlio5mqtf2ds5fkmp/chaussure-air-max-plus-pour-P1Fh7n.png);
 }
 
 #product-image-6{
-    background-image: url(./images/product-shoes-6.webp);
+    background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0d81cee3-f4a9-4a28-b139-fe9c299c9d7f/chaussures-air-max-sc-pour-bd4QB6.png);
 }
 
 #product-image-7{
-    background-image: url(./images/product-shoes-7.webp);
+    background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/dba8706e-3cc2-415f-a2fa-f989edaba590/chaussure-air-max-terrascape-plus-pour-ppK6P9.png);
 
 }
 
 #product-image-8{
-    background-image: url(./images/product-shoes-8.webp);
+    background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d889558a-4e4b-4b28-8887-3f37c69ff3ba/chaussure-air-max-90-futura-pour-q7qs1c.png);
 }
 
 #product-image-9{
-    background-image: url(./images/product-shoes-9.webp);
+    background-image: url(https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e0cab608-8c0f-4cca-b615-63efc56e6035/chaussure-air-max-97-pour-gc7n4Z.png);
 }
 
 .product-info{
@@ -368,7 +368,7 @@ nav img{
     #product-image-1, #product-image-2, #product-image-3,#product-image-4, #product-image-5, #product-image-6,#product-image-7, #product-image-8, #product-image-9{
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         width: 300px;
         height: 300px;
     
@@ -395,8 +395,8 @@ nav img{
 #product-choose-left{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 50%;
-    background-image: url(./images/product-shoes-1.webp);
     background-color: #F6F6F6;
     background-repeat: no-repeat;
     background-position: center;
@@ -653,3 +653,24 @@ margin-bottom: 10px;
     width: 200px;
     background-position: center;
   }
+
+
+
+
+#product-description p span{
+    font-weight: 500;
+}
+
+label {
+    font-weight: 500;
+    font-family: 'Raleway';
+    font-size: 1rem;
+    padding-right: 10px;
+}
+
+select {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: .9rem;
+    padding: 10px 30px 10px 5px;
+}

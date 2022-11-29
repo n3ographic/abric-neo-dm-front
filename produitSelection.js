@@ -14,74 +14,67 @@ const idProduitSelection = response.find((element) => element.id === id);
 
 
 //Sélection de l'id ou le code HTML va être injecter
-const positionElementProduit = document.getElementById("product-choose-right")
+const positionElementProduit = document.getElementById("product-choose")
 
 //afficher du produit sur la page web
 const structurePageProduit = `
+    <div id="product-choose-left" >
+        <div id="${idProduitSelection.url_image}"></div>
+    </div>
 
-<div id="product-choose-description">
+<div id="product-choose-right">
+    <div id="product-choose-description">
 
-                <div id="product-choose-title">
-                    <h3><span>${idProduitSelection.nomProduit}</span></h3>
-                    <p><span>${idProduitSelection.type_chaussure}</span></p>
-                </div>
-    
-                <div id="product-choose-price">
-                    <h2><span>${idProduitSelection.prix}</span></h2>
-                </div>
-
-                <form action="" method="get">
-        
-                    <div id="product-choose-colors">
-                        <h3>Color</h3>
-
-                        <div>
-
-                        <select name="option_color" id="option_color">
-                            <option value="red">Red</option>
-                            <option value="yellow">Yellow</option>
-                            <option value="green">Green</option>
-                        </select>
-
-                        
-
-                        </div>
-                        
+                    <div id="product-choose-title">
+                        <h3><span>${idProduitSelection.nomProduit}</span></h3>
+                        <p><span>${idProduitSelection.type_chaussure}</span></p>
                     </div>
         
-                    <div id="product-choose-size">
-                        <h3>Size</h3>
-                        <div>
-                            <select name="option_size" id="option_size">
-                                <option value="38">38</option>
-                                <option value="40">40</option>
-                                <option value="42">42</option>
+                    <div id="product-choose-price">
+                        <h2><span>${idProduitSelection.prix}</span></h2>
+                    </div>
+
+                    <form action="" method="get">
+            
+                        <div id="product-choose-colors">
+                            <h3>Color</h3>
+
+                            <div>
+
+                            <select name="option_color" id="option_color">
+                                <option value="red">Red</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="green">Green</option>
                             </select>
-                        </div>
                         
+
+                            </div>
+                            
+                        </div>
+            
+                        <div id="product-choose-size">
+                            <h3>Size</h3>
+                            <div>
+                                <select name="option_size" id="option_size">
+                                    <option value="38">38</option>
+                                    <option value="40">40</option>
+                                    <option value="42">42</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+
+                        <button id="product-purchase" type="submit">Acheter le produit</button>
+
+
+                    </form>
+
+                    <div id="product-description">
+                        <h3>Description du produit</h3>
+                        <p><span>${idProduitSelection.description}</span></p>
                     </div>
-
-                    <button id="product-purchase" type="submit">Acheter le produit</button>
-
-
-                </form>
-
-                <div id="product-description">
-                    <h3>Description du produit</h3>
-                    <p><span>${idProduitSelection.description}</span></p>
-                </div>
-    
-                <div id="product-caracteristic">
-                    <h3>Caractéristiques du produit</h3>
-                    <ul>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                        <li>test</li>
-                    </ul>
-                </div>
-            </div>
+    </div>
+</div>
 
 `
 //injection htlm
@@ -104,6 +97,7 @@ console.log(btnBoutonEnvoyerPanier);
 //Event lister sur le bouton
 btnBoutonEnvoyerPanier.addEventListener("click", (event)=>{
     event.preventDefault(); // permet de ne pas recharger la page au clic du bouton
+
     //Choix utilisateur couleur
     const choixColorForm = idColor.value;
     const choixSizeForm = idSize.value;
