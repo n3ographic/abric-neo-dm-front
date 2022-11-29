@@ -9,7 +9,7 @@ console.log(URLSearchParams);
 const id  = urlSearchParams.get('id');
 
 //affichage du produit du produit qui a été séléctionné
-const idProduitSelection = response.find((element) => element.id === id);
+const idProduitSelection = produitData.find((element) => element.id === id);
 //console.log(idProduitSelection);
 
 
@@ -111,8 +111,36 @@ btnBoutonEnvoyerPanier.addEventListener("click", (event)=>{
         quantite : 1,
         prix:idProduitSelection.prix
 }
-console.log(optionProduit)
-})
+
+console.log(optionProduit);
+
+
+//===========Mise en place du local storage============
+let enregistrementProduitLocalStorage = JSON.parse(localStorage.getItem("produit"));
+console.log(enregistrementProduitLocalStorage)
+
+//vérifie si il y a des produits dans le localstorage
+if(enregistrementProduitLocalStorage){
+    enregistrementProduitLocalStorage.push(optionProduit);
+    localStorage.setItem("produit", JSON.stringify(enregistrementProduitLocalStorage));
+
+
+}
+
+//vérifie si il y a  pas de produits dans le localstorage
+else{
+    enregistrementProduitLocalStorage = [];
+    enregistrementProduitLocalStorage.push(optionProduit);
+    localStorage.setItem("produit", JSON.stringify(enregistrementProduitLocalStorage));
+    console.log(enregistrementProduitLocalStorage)
+
+}
+
+});
+
+
+
+
 
 
 

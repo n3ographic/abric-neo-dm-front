@@ -35,16 +35,16 @@ let i = [];
 let url_image = [];
 
 // fonction qui va afficher les produits dans la page web auto
-function affichageProduits(response){
+function affichageProduits(produitData){
 
     //select-ion élement du DOM
     const positionElement = document.querySelector(".product-row");
 
     //la boucle pour afficher tous les objets dans la page web
-    for (i=0; i < response.length; i++){
+    for (i=0; i < produitData.length; i++){
 
     //mettre les données dans  les variables
-    response.forEach((element, i) =>{
+    produitData.forEach((element, i) =>{
         id[i] = element.id;
         nomProduit[i] = element.nomProduit;
         description[i] = element.description;
@@ -80,5 +80,5 @@ function affichageProduits(response){
 
 
 
-affichageProduits(response)
+affichageProduits(produitData)
 

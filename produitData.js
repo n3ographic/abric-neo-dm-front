@@ -1,7 +1,7 @@
 
 //========Déclaration du tableau de données=========
 
-const response = [
+const produitData = [
     {
         url_image:"product-image-1",
         id: "0001",
