@@ -42,9 +42,7 @@ const structurePageProduit = `
                             <div>
 
                             <select name="option_color" id="option_color">
-                                <option value="red">Red</option>
-                                <option value="yellow">Yellow</option>
-                                <option value="green">Green</option>
+                                
                             </select>
                         
 
@@ -56,9 +54,7 @@ const structurePageProduit = `
                             <h3>Size</h3>
                             <div>
                                 <select name="option_size" id="option_size">
-                                    <option value="38">38</option>
-                                    <option value="40">40</option>
-                                    <option value="42">42</option>
+                                    
                                 </select>
                             </div>
                             
@@ -76,9 +72,42 @@ const structurePageProduit = `
     </div>
 </div>
 
-`
+`;
+
+// option des couleurs
+let optionColor = idProduitSelection.color;
+let optionStructureColor =[];
+
+for(let a = 0; a < optionColor.length; a++){
+    optionStructureColor += `
+    <option value="${a}">${optionColor[a]}</option>
+
+    `;
+}
+
+// option des tailles 
+let optionTaille = idProduitSelection.taille;
+let optionStructureTaille=[];
+
+
+for(let e = 0; e < optionTaille.length; e++){
+    optionStructureTaille += `
+    <option value="${e}">${optionTaille[e]}</option>
+
+    `;
+}
+
+
 //injection htlm
 positionElementProduit.innerHTML = structurePageProduit;
+
+
+const positionOptionSelectColor = document.querySelector("#option_color");
+positionOptionSelectColor.innerHTML = optionStructureColor;
+
+const positionOptionSelectTaille = document.querySelector("#option_size");
+positionOptionSelectTaille.innerHTML = optionStructureTaille;
+
 
 
 //============Gestion du panier============
