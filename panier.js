@@ -89,20 +89,32 @@ btnSuppression[f].addEventListener("click",(event) =>{
 
 //vider le panier
 const positionElementPanierSupression = document.querySelector("#panier");
-console.log(positionElementPanierSupression)
 
-const btnSuppressionPanier = `
+const boutonSuppressionPanier = `
             <div id="montant-panier">
                 <strong>Total du panier :</strong>
-                <button class="btnSuppressionPanier"> Vider le panier</button> 
+                <button id="btnSuppressionPanier"> Vider le panier</button> 
             </div>
       
 `;
 
 //injection html
-positionElementPanierSupression.insertAdjacentHTML("beforeend", btnSuppressionPanier )
+positionElementPanierSupression.insertAdjacentHTML("beforeend", boutonSuppressionPanier )
 
-console.log(positionElementPanierSupression)
+const boutonSelectionPanier2 = document.querySelector("#btnSuppressionPanier");
+
+console.log(boutonSelectionPanier2)
+
+boutonSelectionPanier2.addEventListener("click", (event)=>{
+    event.preventDefault
+    localStorage.removeItem("produit");
+    window.location.href = "panier.html"
+})
+
+
+
+
+
 
 
 

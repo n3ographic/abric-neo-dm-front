@@ -751,3 +751,14 @@ footer{
     width: fit-content;
   
 }
+
+
+#btnSuppressionPanier{
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    border-radius: 40px;
+    border: none;
+    width: fit-content;
+}
