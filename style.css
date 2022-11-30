@@ -691,14 +691,6 @@ margin-bottom: 10px;
         padding: 15px 0px;
     }
 
-    #panier-image {
-        background-image: url(./images/product-shoes-1.webp);
-        height: 300px;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
-      }
-
 }
 
 
@@ -746,4 +738,16 @@ footer{
         padding: 0px 10px;
     }
 
+}
+
+
+.btnSuppression{
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    border-radius: 40px;
+    border: none;
+    width: fit-content;
+  
 }

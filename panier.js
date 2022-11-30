@@ -1,5 +1,5 @@
 let enregistrementProduitLocalStorage = JSON.parse(localStorage.getItem("produit"));
-console.log(enregistrementProduitLocalStorage)
+
 
 //Afficher les produit dans l'html
 
@@ -16,7 +16,6 @@ if(enregistrementProduitLocalStorage === null){
     positionElementPanier.innerHTML = panierVide;
 
 }else{
-    console.log(enregistrementProduitLocalStorage)
     let structurePagePanierProduitChoisis = [];
 
     for(j = 0; j < enregistrementProduitLocalStorage.length; j++){
@@ -52,16 +51,61 @@ if(enregistrementProduitLocalStorage === null){
                     <p>1</p>
                 </div>
 
-                <div>
-                    <u>Supprimer le produit</u>
+                <div >
+                <button class="btnSuppression">Supprimer le produit</button>
                 </div>
             </div>
+
+            
         `;
 
         positionElementPanier.innerHTML = structurePagePanierProduitChoisis;
+        
 
     }
+    
 }
+
+//Supprimer les produits
+let btnSuppression = document.querySelectorAll(".btnSuppression");
+
+
+for(let f = 0; f < btnSuppression.length; f++){
+ 
+btnSuppression[f].addEventListener("click",(event) =>{
+    event.preventDefault();
+
+    let idProduitSuppression = enregistrementProduitLocalStorage[f].idProduitSelection;
+   console.log(idProduitSuppression)
+
+   enregistrementProduitLocalStorage = enregistrementProduitLocalStorage.filter(element => element.idProduitSelection !== idProduitSuppression);
+    console.log(enregistrementProduitLocalStorage)
+    //renvoyer le changement dans la clé produit 
+   localStorage.setItem("produit", JSON.stringify(enregistrementProduitLocalStorage));
+
+   window.location.href = "panier.html"
+} )
+}
+
+//vider le panier
+const positionElementPanierSupression = document.querySelector("#panier");
+console.log(positionElementPanierSupression)
+
+const btnSuppressionPanier = `
+            <div id="montant-panier">
+                <strong>Total du panier :</strong>
+                <button class="btnSuppressionPanier"> Vider le panier</button> 
+            </div>
+      
+`;
+
+//injection html
+positionElementPanierSupression.insertAdjacentHTML("beforeend", btnSuppressionPanier )
+
+console.log(positionElementPanierSupression)
+
+
+
 
 
 
