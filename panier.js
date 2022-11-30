@@ -43,7 +43,7 @@ if(enregistrementProduitLocalStorage === null){
 
                 <div>
                     <h4>Prix:</h4>
-                    <p>${enregistrementProduitLocalStorage[j].prix}</p>
+                    <p>${enregistrementProduitLocalStorage[j].prix}€</p>
                 </div>
 
                 <div>
@@ -92,7 +92,7 @@ const positionElementPanierSupression = document.querySelector("#panier");
 
 const boutonSuppressionPanier = `
             <div id="montant-panier">
-                <strong>Total du panier :</strong>
+                
                 <button id="btnSuppressionPanier"> Vider le panier</button> 
             </div>
       
@@ -108,8 +108,62 @@ console.log(boutonSelectionPanier2)
 boutonSelectionPanier2.addEventListener("click", (event)=>{
     event.preventDefault
     localStorage.removeItem("produit");
-    window.location.href = "panier.html"
+    window.location.href = "panier.html";
 })
+
+
+//Calcul du panier
+
+let prixCalculPanier = [];
+
+for(let p = 0; p < enregistrementProduitLocalStorage.length; p++){
+
+    let prixProduit = enregistrementProduitLocalStorage[p].prix 
+
+    prixCalculPanier.push(prixProduit)
+
+    console.log(prixProduit)
+
+}
+
+// c'est un accumulateur. Il traite chaque valeur de la liste afin de réduire à une seule valeur
+const reducer =(accumulator, currentValue) => accumulator + currentValue; 
+
+const prixTtotalProduit = prixCalculPanier.reduce(reducer,0);
+console.log();
+
+//injecter hml 
+const positionElementMontantPanier= document.querySelector("#montant-panier");
+console.log(positionElementMontantPanier);
+
+const montantTotalPanier = `
+            <strong>Total du panier : ${Math.round(prixTtotalProduit)}€</strong>
+      
+`;
+
+positionElementMontantPanier.insertAdjacentHTML("afterbegin", montantTotalPanier)
+
+
+const positionTest= document.querySelector("nav div ul");
+console.log(positionTest);
+
+const montantTotalPanierTest = `
+            <strong>${Math.round(prixTtotalProduit)}€</strong>
+      
+`;
+
+positionTest.insertAdjacentHTML("beforeend", montantTotalPanierTest)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

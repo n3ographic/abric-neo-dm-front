@@ -31,7 +31,7 @@ const structurePageProduit = `
                     </div>
         
                     <div id="product-choose-price">
-                        <h2><span>${idProduitSelection.prix}</span></h2>
+                        <h2><span>${idProduitSelection.prix}€</span></h2>
                     </div>
 
                     <form action="" method="get">

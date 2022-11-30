@@ -40,7 +40,7 @@ function affichageProduits(produitData){
                     <div class="product-info">
                         <div>
                             <h4><span>${nomProduit[i]}</span></h4>
-                            <p><span>${prix[i]}</span></p>
+                            <p><span>${prix[i]}€</span></p>
                         </div>
                         <span class="description-color"><p><span>${type_chaussure[i]}</span></p></span>
                     </div>
