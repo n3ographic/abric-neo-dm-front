@@ -29,6 +29,10 @@ a:hover{
     transition: all 0.4s;
 }
 
+li{
+    list-style: none;
+}
+
 
 
 /*MENU*/
@@ -106,7 +110,6 @@ nav img{
    }
     
 }
-
 
 
 /*HERO*/
@@ -271,7 +274,7 @@ nav img{
 }
 
 .product-box{
-    width: 400px;
+    /*width: 400px;*/
     height: 500px;
     background-color: white;
     margin: 40px 20px 0px 20px;
@@ -346,9 +349,7 @@ nav img{
 
 @media screen and (max-width:576px) {
 
-    .product-info{
-        padding: 0px 30px;
-    }
+    
 
     .product-box{
         margin: 20px 0px;
@@ -713,4 +714,36 @@ select {
     font-weight: 500;
     font-size: .9rem;
     padding: 10px 30px 10px 5px;
+}
+
+
+
+/*FOOTER*/
+
+footer{
+    margin-top: 30px;;
+    height: 100px;
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+#footer-nav ul{
+    display: flex; 
+}
+
+#footer-nav ul li {
+    padding: 0px 20px;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    #footer-nav ul li {
+        padding: 0px 10px;
+    }
+
 }
