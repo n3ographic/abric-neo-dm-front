@@ -36,7 +36,7 @@ let enregistrementProduitLocalStorage = JSON.parse(localStorage.getItem("produit
             </div>
 
             <div style="width:100%; display: flex; justify-content: end; align-items: flex-end;">
-                <button id="product-purchase" type="submit" ><a href="checkout.html">Acheter le produi</a>t</button>
+            <a href="checkout.html"> <button id="product-purchase" type="submit" >Acheter le produit</button></a>
             </div>
 
         </form>
