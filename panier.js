@@ -48,7 +48,7 @@ if(enregistrementProduitLocalStorage === null){
 
                 <div>
                     <h4>Quantité:</h4>
-                    <p>1</p>
+                    <p>${enregistrementProduitLocalStorage[j].quantite}</p>
                 </div>
 
                 <div >
@@ -114,11 +114,13 @@ boutonSelectionPanier2.addEventListener("click", (event)=>{
 
 //Calcul du panier
 
+//console.log(enregistrementProduitLocalStorage.prenom)
+
 let prixCalculPanier = [];
 
 for(let p = 0; p < enregistrementProduitLocalStorage.length; p++){
 
-    let prixProduit = enregistrementProduitLocalStorage[p].prix 
+    let prixProduit = (enregistrementProduitLocalStorage[p].prix) //* 2
 
     prixCalculPanier.push(prixProduit)
 
@@ -161,7 +163,7 @@ const montantTotalPanierTest = `
       
 `;
 
-positionTest.insertAdjacentHTML("beforeend", montantTotalPanierTest)
+positionTest.insertAdjacentHTML("beforeend", montantTotalPanier)
 
 
 

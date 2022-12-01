@@ -408,6 +408,7 @@ nav img{
 #product-choose-right{
     display: flex;
     max-width: 30%;
+    flex-direction: column;
 }
 
 /*.product-image{
@@ -830,4 +831,10 @@ flex-wrap: wrap;
     
     color: white;
 
+}
+
+
+#product-choose-quantite label{
+    font-size: 18px;
+    margin-top: 15px;
 }

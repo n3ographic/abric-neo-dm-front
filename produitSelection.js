@@ -1,6 +1,6 @@
 //récupération de la chaine de requête dans l'url
 
-const  queryStringUrlId = window.location.search;
+const queryStringUrlId = window.location.search;
 console.log(queryStringUrlId);
 
 //extraction de l'id dans l'url
@@ -34,7 +34,7 @@ const structurePageProduit = `
                         <h2><span>${idProduitSelection.prix}€</span></h2>
                     </div>
 
-                    <form action="" method="get">
+                    
             
                         <div id="product-choose-colors">
                             <h3>Color</h3>
@@ -45,25 +45,28 @@ const structurePageProduit = `
                                 
                             </select>
                         
-
                             </div>
                             
                         </div>
+
+                        
             
                         <div id="product-choose-size">
                             <h3>Size</h3>
                             <div>
-                                <select name="option_size" id="option_size">
-                                    
-                                </select>
+                                <select name="option_size" id="option_size"></select>
                             </div>
+                            
+                        </div>
+
+                        <div id="product-choose-quantite">
                             
                         </div>
 
                         <button id="product-purchase" type="submit">Acheter le produit</button>
 
 
-                    </form>
+                    
 
                     <div id="product-description">
                         <h3>Description du produit</h3>
@@ -110,6 +113,20 @@ const positionOptionSelectTaille = document.querySelector("#option_size");
 positionOptionSelectTaille.innerHTML = optionStructureTaille;
 
 
+const positionOptionSelectQuantite = document.querySelector("#product-choose-quantite");
+
+let optionStructureQuantite =[];
+optionStructureQuantite = `
+    <label for="quantity">Quantité</label>
+    <input type="number" id="option_quantite" name="option_quantite" min="1" max="5">
+
+    `;
+
+positionOptionSelectQuantite.innerHTML = optionStructureQuantite;
+
+
+
+
 
 //============Gestion du panier============
 
@@ -119,6 +136,8 @@ console.log(idColor)
 
 //Sélection de l'id size du formulaire
 const idSize = document.querySelector("#option_size");
+
+const optionQuantite = document.querySelector("#option_quantite");
 
 //Clique sur le bouton Ajouter au panier
 const btnBoutonEnvoyerPanier = document.querySelector("#product-purchase")
@@ -132,6 +151,7 @@ btnBoutonEnvoyerPanier.addEventListener("click", (event)=>{
     //Choix utilisateur couleur
     const choixColorForm = idColor.value;
     const choixSizeForm = idSize.value;
+    //const choixQuantiteForm = 
 
     //Récupérer les valeurs du formulaire
     let optionProduit = {
@@ -140,8 +160,8 @@ btnBoutonEnvoyerPanier.addEventListener("click", (event)=>{
         idProduitSelection: idProduitSelection.id,
         idColor: choixColorForm,
         idSize: choixSizeForm,
-        quantite : 1,
-        prix:idProduitSelection.prix
+        quantite : optionQuantite.value,
+        prix:idProduitSelection.prix,
 }
 
 console.log(optionProduit);

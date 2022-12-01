@@ -5,11 +5,12 @@
 let id = [];
 let nomProduit = [];
 let description = [];
-let  prix = [];
+let prix = [];
 let type_chaussure = [];
 let structureProduits = "";
 let i = [];
 let url_image = [];
+let quantite = [];
 
 // fonction qui va afficher les produits dans la page web auto
 function affichageProduits(produitData){
@@ -18,7 +19,7 @@ function affichageProduits(produitData){
     const positionElement = document.querySelector(".product-row");
 
     //la boucle pour afficher tous les objets dans la page web
-    for (i=0; i < produitData.length; i++){
+    for (i=0; i<produitData.length; i++){
 
     //mettre les données dans  les variables
     produitData.forEach((element, i) =>{
