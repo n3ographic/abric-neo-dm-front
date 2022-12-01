@@ -41,7 +41,7 @@ positionElementRecap.insertAdjacentHTML("afterbegin", structurePageConfirmation)
 let structurePageProduitConfirmation = [];
 const positionElementPanier = document.querySelector("#recap-produit-commande");
 
-for(c = 0; c < enregistrementProduitLocalStorage.length; c++){
+for(c = 0; c <enregistrementProduitLocalStorage.length; c++){
 
     structurePageProduitConfirmation += `
 
@@ -51,20 +51,13 @@ for(c = 0; c < enregistrementProduitLocalStorage.length; c++){
                     <p>${enregistrementProduitLocalStorage[c].nomProduit}</p>   
                     <div>
                         <h4>Quantité:</h4>
-                        <p>1</p>
+                        <p>${enregistrementProduitLocalStorage[c].quantite}</p>
                     </div>
                 </div>
             </div>
-
-            
-
-        
-
-        
     `;
 
     positionElementPanier.innerHTML = structurePageProduitConfirmation;
-    
 
 }
 

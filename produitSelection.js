@@ -59,7 +59,7 @@ const structurePageProduit = `
                             
                         </div>
 
-                        <div id="product-choose-quantite">
+                        <div id="product-choose-quantite" style="margin-top:20px">
                             
                         </div>
 
@@ -118,7 +118,7 @@ const positionOptionSelectQuantite = document.querySelector("#product-choose-qua
 let optionStructureQuantite =[];
 optionStructureQuantite = `
     <label for="quantity">Quantité</label>
-    <input type="number" id="option_quantite" name="option_quantite" min="1" max="5">
+    <input type="number" id="option_quantite" name="option_quantite" value="1" min="1" max="5">
 
     `;
 
@@ -189,6 +189,7 @@ else{
 }
 
 });
+
 
 
 

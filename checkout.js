@@ -7,7 +7,7 @@ let enregistrementProduitLocalStorage = JSON.parse(localStorage.getItem("produit
     
     const structurePageCheckout =`
 
-        <form action="" method="get" id="form-checkout">
+        <form method="get" id="form-checkout">
             <h1>Checkout</h1>
 
             <div>
@@ -26,17 +26,17 @@ let enregistrementProduitLocalStorage = JSON.parse(localStorage.getItem("produit
             </div>
 
             <div>
-                <label for="phone">Phone number</label>
+                <label for="tel">Téléphone</label>
                 <input type="tel" name="tel" id="tel" placeholder="+33">
             </div>
 
             <div>
                 <label for="email">Email</label>
-                <input type="mail" name="email" id="email" placeholder="johndoe@gmail.com">
+                <input type="email" name="email" id="email" placeholder="johndoe@gmail.com">
             </div>
 
             <div style="width:100%; display: flex; justify-content: end; align-items: flex-end;">
-            <a href="checkout.html"> <button id="product-purchase" type="submit" >Acheter le produit</button></a>
+             <button id="product-purchase" type="submit" >Acheter le produit</button>
             </div>
 
         </form>

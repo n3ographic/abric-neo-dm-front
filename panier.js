@@ -120,11 +120,10 @@ let prixCalculPanier = [];
 
 for(let p = 0; p < enregistrementProduitLocalStorage.length; p++){
 
-    let prixProduit = (enregistrementProduitLocalStorage[p].prix) //* 2
+    let prixProduit = (enregistrementProduitLocalStorage[p].prix) * enregistrementProduitLocalStorage[p].quantite
 
     prixCalculPanier.push(prixProduit)
 
-    console.log(prixProduit)
 
 }
 
@@ -164,6 +163,20 @@ const montantTotalPanierTest = `
 `;
 
 positionTest.insertAdjacentHTML("beforeend", montantTotalPanier)
+
+
+const checkoutPanier  = document.querySelector("#checkout-panier")
+
+console.log(checkoutPanier)
+
+checkoutPanier.addEventListener("click", (event) =>{
+    event.preventDefault();
+
+    window.location.href = "checkout.html"
+
+
+})
+
 
 
 
