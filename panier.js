@@ -106,7 +106,7 @@ const boutonSelectionPanier2 = document.querySelector("#btnSuppressionPanier");
 console.log(boutonSelectionPanier2)
 
 boutonSelectionPanier2.addEventListener("click", (event)=>{
-    event.preventDefault
+    event.preventDefault();
     localStorage.removeItem("produit");
     window.location.href = "panier.html";
 })
@@ -141,6 +141,15 @@ const montantTotalPanier = `
       
 `;
 
+//Stockage du prix
+
+const prixPanier = {
+    panier: prixTtotalProduit
+}
+
+console.log(prixPanier)
+localStorage.setItem("prixPanier", JSON.stringify(prixPanier) );
+
 positionElementMontantPanier.insertAdjacentHTML("afterbegin", montantTotalPanier)
 
 
@@ -153,9 +162,6 @@ const montantTotalPanierTest = `
 `;
 
 positionTest.insertAdjacentHTML("beforeend", montantTotalPanierTest)
-
-
-
 
 
 
