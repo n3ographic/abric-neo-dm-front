@@ -1,22 +1,20 @@
-//récupération de la chaine de requête dans l'url
-
+//Récupération de la chaine de requête dans l'url
 const queryStringUrlId = window.location.search;
 console.log(queryStringUrlId);
 
-//extraction de l'id dans l'url
+//Extraction de l'id dans l'url
 const urlSearchParams = new URLSearchParams(queryStringUrlId);
 console.log(URLSearchParams);
 const id  = urlSearchParams.get('id');
 
-//affichage du produit du produit qui a été séléctionné
-const idProduitSelection = produitData.find((element) => element.id === id);
-//console.log(idProduitSelection);
-
+//Affichage du produit du produit qui a été séléctionné
+const idProduitSelection = produitData.find((element) => element.id === id); 
+// l'élément find va permettre de renvoyer le premier élément trouvé dans le tableau  qui respecte la condition donnée
 
 //Sélection de l'id ou le code HTML va être injecter
 const positionElementProduit = document.getElementById("product-choose")
 
-//afficher du produit sur la page web
+//Affichage du produit sur la page web
 const structurePageProduit = `
     <div id="product-choose-left" >
         <div id="${idProduitSelection.url_image}"></div>
@@ -77,10 +75,11 @@ const structurePageProduit = `
 
 `;
 
-// option des couleurs
+//Affichage option des couleurs 
 const optionColor = idProduitSelection.color;
 let optionStructureColor =[];
 
+//Il va directement prendre toutes les couleurs associé à un produit
 for(let a = 0; a < optionColor.length; a++){
     optionStructureColor += `
     <option value="${optionColor[a]}">${optionColor[a]}</option>
@@ -88,12 +87,12 @@ for(let a = 0; a < optionColor.length; a++){
     `;
 }
 
-// option des tailles 
+//Affichage option des tailles 
 let optionTaille = idProduitSelection.taille;
 let optionStructureTaille=[];
 console.log(optionTaille)
 
-
+// il va directement prendre toutes les couleurs associé à un produit
 for(let e = 0; e < optionTaille.length; e++){
     optionStructureTaille += `
     <option value="${optionTaille[e]}">${optionTaille[e]}</option>
@@ -106,6 +105,7 @@ for(let e = 0; e < optionTaille.length; e++){
 positionElementProduit.innerHTML = structurePageProduit;
 
 
+
 const positionOptionSelectColor = document.querySelector("#option_color");
 positionOptionSelectColor.innerHTML = optionStructureColor;
 
@@ -113,6 +113,7 @@ const positionOptionSelectTaille = document.querySelector("#option_size");
 positionOptionSelectTaille.innerHTML = optionStructureTaille;
 
 
+//Ajout de la position de l'option quantité
 const positionOptionSelectQuantite = document.querySelector("#product-choose-quantite");
 
 let optionStructureQuantite =[];
@@ -130,6 +131,8 @@ positionOptionSelectQuantite.innerHTML = optionStructureQuantite;
 
 //============Gestion du panier============
 
+//Récupérer la couleur, la taille et la quantité choisis du produit
+
 //Sélection de l'id couleur du formulaire
 const idColor = document.querySelector("#option_color");
 console.log(idColor)
@@ -142,16 +145,12 @@ const optionQuantite = document.querySelector("#option_quantite");
 //Clique sur le bouton Ajouter au panier
 const btnBoutonEnvoyerPanier = document.querySelector("#product-purchase")
 
-console.log(btnBoutonEnvoyerPanier);
-
-//Event lister sur le bouton
 btnBoutonEnvoyerPanier.addEventListener("click", (event)=>{
     event.preventDefault(); // permet de ne pas recharger la page au clic du bouton
 
-    //Choix utilisateur couleur
+    //Choix utilisateur couleur et taille
     const choixColorForm = idColor.value;
     const choixSizeForm = idSize.value;
-    //const choixQuantiteForm = 
 
     //Récupérer les valeurs du formulaire
     let optionProduit = {

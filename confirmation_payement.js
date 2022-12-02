@@ -2,6 +2,8 @@ let enregistrementProduitLocalStorage = JSON.parse(localStorage.getItem("produit
 let enregistrementFormulaire = JSON.parse(localStorage.getItem("formulaireObjet"));
 let prixPanier = JSON.parse(localStorage.getItem("prixPanier"));
 
+
+//Arrondissement du prix du panier panier 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
@@ -9,6 +11,7 @@ function getRandomInt(max) {
   console.log(getRandomInt(100000));
 
 
+//mise en place de l'html du récap de la commande
 positionElementRecap = document.querySelector("#payement");
 console.log(positionElementRecap)
 
@@ -35,16 +38,16 @@ const structurePageConfirmation =`
 `;
 
 //injection html
-
 positionElementRecap.insertAdjacentHTML("afterbegin", structurePageConfirmation);
 
+
+//recap des produits achetés
 let structurePageProduitConfirmation = [];
 const positionElementPanier = document.querySelector("#recap-produit-commande");
 
 for(c = 0; c <enregistrementProduitLocalStorage.length; c++){
 
     structurePageProduitConfirmation += `
-
             <div>
                 <div>
                     <h4>Titre du produit</h4>
@@ -57,10 +60,14 @@ for(c = 0; c <enregistrementProduitLocalStorage.length; c++){
             </div>
     `;
 
+    // injecttion html
     positionElementPanier.innerHTML = structurePageProduitConfirmation;
 
 }
 
+
+
+// retour vers la page d'accueil et vide du cache
 const boutonReturnHome = document.querySelector("#return-home");
 
 boutonReturnHome.addEventListener("click", (event)=>{

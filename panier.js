@@ -1,9 +1,10 @@
+//Récupération des produits dans le localstorage
 let enregistrementProduitLocalStorage = JSON.parse(localStorage.getItem("produit"));
 
 
-//Afficher les produit dans l'html
-
+//Afficher les produits dans l'html
 const positionElementPanier = document.querySelector("#panier-product-choose");
+
 
 if(enregistrementProduitLocalStorage === null){
     let panierVide = `
@@ -11,13 +12,15 @@ if(enregistrementProduitLocalStorage === null){
         <div id="panier-vide"><p>Votre panier est vide</p></div>
 
     `;
-    console.log("jesuis vide")
 
+    //injection html
     positionElementPanier.innerHTML = panierVide;
 
 }else{
+
     let structurePagePanierProduitChoisis = [];
 
+    //Boucle qui va afficher tout les produits ajouté au panier
     for(j = 0; j < enregistrementProduitLocalStorage.length; j++){
 
         structurePagePanierProduitChoisis += `
@@ -59,6 +62,7 @@ if(enregistrementProduitLocalStorage === null){
             
         `;
 
+        //injection html
         positionElementPanier.innerHTML = structurePagePanierProduitChoisis;
         
 
@@ -69,25 +73,30 @@ if(enregistrementProduitLocalStorage === null){
 //Supprimer les produits
 let btnSuppression = document.querySelectorAll(".btnSuppression");
 
-
+//Boucle pour supprimer produit par produit
 for(let f = 0; f < btnSuppression.length; f++){
  
 btnSuppression[f].addEventListener("click",(event) =>{
-    event.preventDefault();
+    event.preventDefault(); // permet de ne pas recharger la page au clic du bouton
 
     let idProduitSuppression = enregistrementProduitLocalStorage[f].idProduitSelection;
    console.log(idProduitSuppression)
 
+
+    //la méthode filter() av créer et retourner un nouveau tableau en contenant tous les éléments du tableau d'origine remplit par une condition donnée
    enregistrementProduitLocalStorage = enregistrementProduitLocalStorage.filter(element => element.idProduitSelection !== idProduitSuppression);
     console.log(enregistrementProduitLocalStorage)
-    //renvoyer le changement dans la clé produit 
-   localStorage.setItem("produit", JSON.stringify(enregistrementProduitLocalStorage));
 
+    //renvoyer le changement dans la clé produit 
+    localStorage.setItem("produit", JSON.stringify(enregistrementProduitLocalStorage));
+
+// l'utilisateur reste sur la page à chaque clci sur le bouton
    window.location.href = "panier.html"
+
 } )
 }
 
-//vider le panier
+//Vider le panier d'un coup
 const positionElementPanierSupression = document.querySelector("#panier");
 
 const boutonSuppressionPanier = `
@@ -113,9 +122,6 @@ boutonSelectionPanier2.addEventListener("click", (event)=>{
 
 
 //Calcul du panier
-
-//console.log(enregistrementProduitLocalStorage.prenom)
-
 let prixCalculPanier = [];
 
 for(let p = 0; p < enregistrementProduitLocalStorage.length; p++){
@@ -157,16 +163,11 @@ positionElementMontantPanier.insertAdjacentHTML("afterbegin", montantTotalPanier
 const positionTest= document.querySelector("nav div ul");
 console.log(positionTest);
 
-const montantTotalPanierTest = `
-            <strong>${Math.round(prixTtotalProduit)}€</strong>
-      
-`;
 
 positionTest.insertAdjacentHTML("beforeend", montantTotalPanier)
 
-
+//Pour renvoyer l'utilisateur vers la page checkout 
 const checkoutPanier  = document.querySelector("#checkout-panier")
-
 console.log(checkoutPanier)
 
 checkoutPanier.addEventListener("click", (event) =>{

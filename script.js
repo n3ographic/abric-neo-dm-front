@@ -1,7 +1,7 @@
-//------------Mettre les données sur la page d'accueil------------
+//------------Mettre les données sur la pag ed'accueil------------
 
-//déclaration de variable
-//let url = [];
+//Déclaration de variables
+
 let id = [];
 let nomProduit = [];
 let description = [];
@@ -12,16 +12,16 @@ let i = [];
 let url_image = [];
 let quantite = [];
 
-// fonction qui va afficher les produits dans la page web auto
+//Fonction qui va afficher les produits dans la page web auto
 function affichageProduits(produitData){
 
-    //select-ion élement du DOM
+    //Selection élement dans la page pour l'afficher par la suite
     const positionElement = document.querySelector(".product-row");
 
-    //la boucle pour afficher tous les objets dans la page web
+    //La boucle pour afficher tous les objets dans la page web
     for (i=0; i<produitData.length; i++){
 
-    //mettre les données dans  les variables
+    //Mettre les données dans  les variables
     produitData.forEach((element, i) =>{
         id[i] = element.id;
         nomProduit[i] = element.nomProduit;
@@ -29,11 +29,9 @@ function affichageProduits(produitData){
         prix[i] = element.prix;
         type_chaussure[i] = element.type_chaussure;
         url_image[i] = element.url_image;
-
-        //url[i] = element.url;
     });
 
-    //afficher tous les produits sur la page web
+    //Afficher tous les produits sur la page web
     structureProduits += `
             <div class="product-box">
                 <a href="http://127.0.0.1:5500/produit.html?id=${id[i]}">
@@ -48,6 +46,7 @@ function affichageProduits(produitData){
                 </a>
             </div>
         `;
+
         //injection html
         positionElement.innerHTML = structureProduits;
 
@@ -57,6 +56,6 @@ function affichageProduits(produitData){
 }
 
 
-
+//Affichage des produits
 affichageProduits(produitData)
 
